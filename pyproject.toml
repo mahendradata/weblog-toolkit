@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wltk"
+version = "0.1.0"
+description = "A toolkit for parsing and analyzing web server logs."
+authors = [
+  { name="Mahendra Data", email="data.nduth@gmail.com" }
+]
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.11"
+dependencies = ["pandas"]
+
+[project.urls]
+Homepage = "https://github.com/mahendradata/weblog-toolkit"
