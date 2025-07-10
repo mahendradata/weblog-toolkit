@@ -1,1 +1,0 @@
-from .parser import parse_nginx_log
