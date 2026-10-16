@@ -1,3 +1,6 @@
-from .parser import log_to_dataframe
+from importlib.metadata import version
 
-__all__ = ["log_to_dataframe"]
+from .logio import parse_log
+
+__version__ = version("wltk")
+__all__ = ["parse_log", "__version__"]

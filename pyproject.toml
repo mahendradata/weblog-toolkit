@@ -4,15 +4,31 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wltk"
-version = "0.1.0"
-description = "A toolkit for parsing and analyzing web server logs."
+version = "0.2.0"
+description = "A toolkit for analyzing web server logs."
 authors = [
-  { name="Mahendra Data", email="data.nduth@gmail.com" }
+  { name="Mahendra Data", email="mahendra.data@ub.ac.id" }
 ]
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.11"
-dependencies = ["pandas"]
+dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/mahendradata/weblog-toolkit"
+
+[project.scripts]
+wltk = "wltk.cli:main"
+
+[dependency-groups]
+dev = ["pytest", "ruff", "pyrefly"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
